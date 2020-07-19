@@ -1,0 +1,46 @@
+
+def main():
+      while True:
+           os.system("clear")
+           print('')
+           print('')
+           slowprint(logo)
+           print('')
+           try:
+                print("\x1b[1;32m                       >> Access Key <<\x1b[00m")
+                x  = getpass('\x1b[1;32m                      \x1b[37m ')
+                print ("")
+                print ("")
+                print ("")
+                print ("")
+                if x==pwd:
+                   os.system('clear')
+                   os.system("sleep 0.1")
+                   print("")
+                   break
+                else:
+                      print("")
+                      print("")
+                      print("\x1b[91m                        Access Denied !")
+                      print("")
+                      print("")
+                      time.sleep(1)
+                      print("")
+           except Exception:
+
+                      print("")
+                      print("")
+                      print("\x1b[91m                        Access Denied !")
+                      time.sleep(1)
+                      print("")
+                      print("")
+           except KeyboardInterrupt:
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      print("")
+                      os.system('killall -9 com.termux')
+
+
+main()
