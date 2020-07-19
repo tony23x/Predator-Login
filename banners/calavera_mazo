@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# coding=utf-8
+import socket,struct,time,os,sys
+from getpass import getpass
+
+def slowprint(s):
+    for c in s + '\n':
+        sys.stdout.write(c)
+        sys.stdout.flush()
+
+
+
+logo = """ \x1b[1;00m
+  
+                                    \x1b[1;31m\    |    | \x1b[00m  
+                                     \x1b[1;31m\x1b[1;31m\ "" "" ""   / \x1b[00m  
+                                  \x1b[1;31m\  "" "" " "" "/ \x1b[00m  
+                                   \x1b[1;31m\"" " "| "" ""---- \x1b[00m  
+                                   \x1b[1;31m"\"" ""|"" "" " \x1b[00m  
+                             \x1b[1;31m-----"" \"" "" "" "\\ \x1b[00m  
+                                 \x1b[1;31m""  "" ""  ""  \ \x1b[00m  
+                     \x1b[1;37me@@@@@@@@@\x1b[00m\x1b[1;31m^""" """"" "" "" ""\x1b[00m
+                 \x1b[1;37m_@@@@@@@@@@@\x1b[00m  \x1b[1;31mee"" "e"" "\x1b[1;37m.@e\x1b[00m
+               \x1b[1;37m_e@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\x1b[00m
+               \x1b[1;37m@@@@@@"@~~~~~~~~@@@.@@~~~~~~.@@e\x1b[00m
+               \x1b[1;37m@ @@@@.@     \x1b[1;31m. ..\x1b[00m@@@@ .    . ..@\x1b[00m
+               \x1b[1;37m@ @@@@.    \x1b[1;31m... ..\x1b[00m@@@@e.   . ...@\x1b[00m
+               \x1b[1;37m@."@@@@@eeeeeeee@@~ ~@@eeeeee@@@\x1b[00m
+                \x1b[1;37m@e.@@@@@@@@@@@@@@ | @@@@@@@@@\x1b[00m
+                 \x1b[1;37m@eeeeeee@@@@@@@[ : ]@@@@@'\x1b[00m
+                    \x1b[1;31m" ""\x1b[00m \x1b[1;37m@@@@@@@::@::@@@@@\x1b[00m 
+                    \x1b[1;31m"" "\x1b[00m \x1b[1;37m@@@@@@@@@@@@@@@@@\x1b[00m
+                  \x1b[1;31m"" "\x1b[00m   \x1b[1;37mv@@@@@@@@@v@@@v@@\x1b[00m 
+                 \x1b[1;31m" "\x1b[00m      \x1b[1;37mV  VV  V  V    V\x1b[00m
+                 \x1b[1;31m"\x1b[00m
+
+
+                   \x1b[00m\033[041m WELCOME TO TERMUX MASTER \033[00m\x1b[00m
+
+
+   \x1b[1;31m  [\x1b[1;32m-\x1b[00m\x1b[1;31m] If you help online, others will also help you [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+         [\x1b[1;32m-\x1b[00m\x1b[1;31m] Hacking is not a crime it is an art [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+          [\x1b[1;32m-\x1b[00m\x1b[1;31m] Physics is the OS of the Universe [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+                  [\x1b[1;32m-\x1b[00m\x1b[1;31m] t.me/th3_pr3dat0r [\x1b[1;32m-\x1b[00m\x1b[1;31m]\x1b[00m
+"""
+
+
+

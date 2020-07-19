@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+# coding=utf-8
+import socket,struct,time,os,sys
+from getpass import getpass
+
+def slowprint(s):
+    for c in s + '\n':
+        sys.stdout.write(c)
+        sys.stdout.flush()
+
+
+
+logo = """
+\x1b[1;32m                      -{ Welcome my lord }-
+                               
+
+                      ▒▒▒░░░░░░░░░░▄▐░░░░
+                      ▒░░░░░░▄▄▄░░▄██▄░░░
+                      ░░░░░░▐▀█▀▌░░░░▀█▄░
+                      ░░░░░░▐█▄█▌░░░░░░▀█▄
+                      ░░░░░░░▀▄▀░░░▄▄▄▄▄▀▀
+                      ░░░░░▄▄▄██▀▀▀▀░░░░░
+                      ░░░░█▀▄▄▄█░▀▀░░░░░░
+                      ░░░░▌░▄▄▄▐▌▀▀▀░░░░░
+                      ░▄░▐░░░▄▄░█░▀▀░░░░░
+                      ░▀█▌░░░▄░▀█▀░▀░░░░░
+                      ░░░░░░░░▄▄▐▌▄▄░░░░░
+                      ░░░░░░░░▀███▀█░▄░░░
+                      ░░░░░░░▐▌▀▄▀▄▀▐▄░░░
+                      ░░░░░░░▐▀░░░░░░▐▌░░
+                      ░░░░░░░█░░░░░░░░█░░
+
+\x1b[00m
+
+
+\x1b[1;31m    [\x1b[1;32m-\x1b[00m\x1b[1;31m] If you help online, others will also help you [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+         [\x1b[1;32m-\x1b[00m\x1b[1;31m] Hacking is not a crime it is an art [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+          [\x1b[1;32m-\x1b[00m\x1b[1;31m] Physics is the OS of the Universe [\x1b[1;32m-\x1b[00m\x1b[1;31m]
+                  [\x1b[1;32m-\x1b[00m\x1b[1;31m] t.me/th3_pr3dat0r [\x1b[1;32m-\x1b[00m\x1b[1;31m]\x1b[00m
+"""
+
+
+
