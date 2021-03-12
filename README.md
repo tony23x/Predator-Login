@@ -1,6 +1,8 @@
 # Predator-Login
 Script solo para Termux que te permite tener un login con la contraseña y banner que quieras
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/th3pr3d4t0r)
+
 ## Para usarlo solo ejecuta
 
 (en orden):
